@@ -12,8 +12,7 @@ function App() {
   });
   const [idEditando, setIdEditando] = useState(null);
   const [busqueda, setBusqueda] = useState('');
-  const [traduccionEncontrada, setTraduccionEncontrada] = useState(''); // 👈 almacena la traducción mostrada
-
+  const [traduccionEncontrada, setTraduccionEncontrada] = useState(''); 
   const obtenerPalabras = async () => {
     const res = await axios.get(`/palabras`, { params: busqueda ? { q: busqueda } : {} });
     setPalabras(res.data);
@@ -54,7 +53,7 @@ function App() {
     obtenerPalabras();
   };
 
-  // 🔍 Buscar traducción en la BD cada vez que se escribe algo
+  
   const buscarTraduccion = async (valor) => {
     setBusqueda(valor);
     if (valor.trim() === '') {
@@ -98,7 +97,7 @@ function App() {
         />
       </div>
 
-      {/* 📝 Formulario */}
+  
       <form onSubmit={manejarEnvio}>
         <input
           required
