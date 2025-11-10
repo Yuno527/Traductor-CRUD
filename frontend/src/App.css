@@ -1,0 +1,184 @@
+/* 🎨 Estilo general */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f3f4f6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor principal */
+div {
+  box-sizing: border-box;
+}
+
+.App {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Título */
+h1 {
+  text-align: center;
+  color: #3f51b5;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* 🔍 Buscador */
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  outline: none;
+  transition: all 0.3s ease;
+  margin: 0 30px 30px 0;
+}
+
+input[type="text"]:focus {
+  border-color: #3f51b5;
+  box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.2);
+}
+
+button {
+  background-color: #3f51b5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-right: 30px;
+}
+
+button:hover {
+  background-color: #2c3e9b;
+  transform: scale(1.03);
+}
+
+button:disabled {
+  background-color: #cbd5e0;
+  cursor: not-allowed;
+}
+
+/* 📝 Formulario */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+form input,
+form select {
+  flex: 1;
+  min-width: 160px;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+form input:focus,
+form select:focus {
+  border-color: #3f51b5;
+  box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.2);
+}
+
+form button {
+  flex: none;
+  background-color: #4caf50;
+  font-weight: 500;
+}
+
+form button:hover {
+  background-color: #3f8a40;
+}
+
+form button[type="button"] {
+  background-color: #9ca3af;
+}
+
+form button[type="button"]:hover {
+  background-color: #6b7280;
+}
+
+/* 🧾 Tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th,
+td {
+  border: 1px solid #e5e7eb;
+  padding: 10px 12px;
+  text-align: center;
+}
+
+th {
+  background-color: #e8eaf6;
+  color: #3f51b5;
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+tr:hover {
+  background-color: #f1f5f9;
+}
+
+/* Botones dentro de tabla */
+td button {
+  padding: 6px 10px;
+  margin: 0 2px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+td button:first-child {
+  background-color: #facc15;
+  color: #222;
+}
+
+td button:first-child:hover {
+  background-color: #eab308;
+}
+
+td button:last-child {
+  background-color: #ef4444;
+}
+
+td button:last-child:hover {
+  background-color: #dc2626;
+}
+
+/* 📱 Responsividad */
+@media (max-width: 768px) {
+  .App {
+    padding: 15px;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  form input,
+  form select,
+  form button {
+    width: 100%;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+}
